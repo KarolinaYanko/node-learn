@@ -1,0 +1,9 @@
+---
+applications:
+	name: nodejs
+  memory: 128M
+  path: .
+  buildpack: https://github.com/heroku/heroku-buildpack-nodejs
+  domain: eu-gb.mybluemix.net
+  command: node server.js
+  host: nodde-digest
