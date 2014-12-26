@@ -7,9 +7,9 @@ var User = require('./user');
 function run () {
 	// body...
 	var john = new User('John');
-	var ian = new User('Ian');
+	var Caroline = new User('Caroline');
 
-	john.hello(ian);
+	john.hello(Caroline);
 
 	console.log(db.getPhrase('Run saccessful'));
 }
