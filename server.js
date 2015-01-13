@@ -1,21 +1,12 @@
-
-var db = require('./db');
-db.connect();
-
-var User = require('./user');
-
-function run () {
-	// body...
-	var john = new User('John');
-	var Caroline = new User('Caroline');
-
-	john.hello(Caroline);
-
-	console.log(db.getPhrase('Run saccessful'));
+function User(name) {
+	this.name = name;
 }
 
-if (module.parent) {
-	exports.run = run;
-} else{
-	run();
-};
+User.prototype.hello = function(who) {
+	console.log('Hello, ' + who.name);
+}
+
+var john = new User('John');
+var	mark = new User('Mark');
+
+john.hello(mark);
